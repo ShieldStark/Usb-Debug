@@ -2,6 +2,7 @@ package com.example.base;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onFinish() {
                             toast.cancel();
+                            Intent intent=new Intent(MainActivity.this,PopUp.class);
+                            startActivity(intent);
 
                         }
                     };
